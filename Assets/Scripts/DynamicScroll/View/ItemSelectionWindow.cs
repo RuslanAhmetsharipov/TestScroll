@@ -62,14 +62,6 @@ namespace DynamicScroll.View
 
         private void OnItemSelectClicked(ItemView itemView)
         {
-            if (_selectedItem.Value == itemView)
-            {
-                _selectedItem.Value.SetSelected(false);
-                _selectedItem.Value = null;
-                _selectedIndex = -1;
-                return;
-            }
-
             var index = Array.IndexOf(_itemViews, itemView);
             if (index == -1)
                 Debug.LogError($"ItemView {itemView} not found");
@@ -106,20 +98,21 @@ namespace DynamicScroll.View
             if (_selectedIndex == index)
             {
                 _selectedIndex = -1;
+                _selectedItem.Value = null;
                 return;
             }
 
-            _selectedIndex = index;
-            var calculatedHeight = 0f;
-            for (int i = 0; i < _selectedIndex; i++)
+            float animationRemovedHeight = 0f;
+            if (_selectedIndex < index && _selectedIndex >= 0)
             {
-                calculatedHeight += _itemViews[i].CurrentHeight;
+                animationRemovedHeight += _selectedItem.Value.CurrentAddedHeight;
             }
-
+            
+            _selectedIndex = index;
             _cts?.Cancel();
             _cts = new CancellationTokenSource();
             _selectedItem.Value = _itemViews[_selectedIndex];
-            MoveScrollTo(calculatedHeight).Forget();
+            MoveScrollTo(Mathf.Abs(_selectedItem.Value.GetPosition() + animationRemovedHeight)).Forget();
         }
 
         private async UniTaskVoid MoveScrollTo(float height)

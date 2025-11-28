@@ -20,11 +20,12 @@ namespace DynamicScroll.View
 
         private float _startY;
         private Action<ItemView> _onClick;
+        private float _currentAddedHeight;
         private CancellationTokenSource _cancellationToken;
         
         public string CurrentItemId { get; private set; }
         public bool IsSelected { get; private set; }
-        public float CurrentHeight => _rectTransform.rect.height;
+        public float CurrentAddedHeight => _currentAddedHeight;
 
         private void Start()
         {
@@ -42,36 +43,6 @@ namespace DynamicScroll.View
         public void OnPointerClick(PointerEventData eventData)
         {
             _onClick?.Invoke(this);
-        }
-
-        private async UniTask OpenItem()
-        {
-            IsSelected = true;
-            var heightToAdd = _mainDescription.rectTransform.rect.height;
-            var speed = heightToAdd / _animationTime;
-            var sizeDelta = _rectTransform.sizeDelta;
-            var cumulativeTime = 0f;
-            while (_rectTransform.sizeDelta.y - heightToAdd < _startY)
-            {
-                cumulativeTime += Time.deltaTime;
-                _rectTransform.sizeDelta = new Vector2(sizeDelta.x, sizeDelta.y + speed * cumulativeTime);
-                await UniTask.Yield(_cancellationToken.Token);
-            }
-        }
-
-        private async UniTask CloseItem()
-        {
-            IsSelected = false;
-            var heightToRemove = _mainDescription.rectTransform.rect.height;
-            var speed = heightToRemove / _animationTime;
-            var sizeDelta = _rectTransform.sizeDelta;
-            var cumulativeTime = 0f;
-            while (_rectTransform.sizeDelta.y - _startY > 0f)
-            {
-                cumulativeTime += Time.deltaTime;
-                _rectTransform.sizeDelta = new Vector2(sizeDelta.x, sizeDelta.y - speed * cumulativeTime);
-                await UniTask.Yield(_cancellationToken.Token);
-            }
         }
         
         public void SetData(VisualRegistry visualRegistry, Action<ItemView> onClicked, ItemData itemData)
@@ -97,6 +68,45 @@ namespace DynamicScroll.View
                 CloseItem().Forget();
                 _selectIndicator.SetActive(false);
             }
+        }
+
+        public float GetPosition()
+        {
+            return _rectTransform.anchoredPosition.y;
+        }
+
+        private async UniTask OpenItem()
+        {
+            IsSelected = true;
+            var heightToAdd = _mainDescription.rectTransform.rect.height;
+            var speed = heightToAdd / _animationTime;
+            var sizeDelta = _rectTransform.sizeDelta;
+            var cumulativeTime = 0f;
+            while (_rectTransform.sizeDelta.y - heightToAdd < _startY)
+            {
+                cumulativeTime += Time.deltaTime;
+                _rectTransform.sizeDelta = new Vector2(sizeDelta.x, sizeDelta.y + speed * cumulativeTime);
+                await UniTask.Yield(_cancellationToken.Token);
+            }
+
+            _currentAddedHeight = heightToAdd;
+        }
+
+        private async UniTask CloseItem()
+        {
+            IsSelected = false;
+            var heightToRemove = _mainDescription.rectTransform.rect.height;
+            var speed = heightToRemove / _animationTime;
+            var sizeDelta = _rectTransform.sizeDelta;
+            var cumulativeTime = 0f;
+            while (_rectTransform.sizeDelta.y - _startY > 0f)
+            {
+                cumulativeTime += Time.deltaTime;
+                _rectTransform.sizeDelta = new Vector2(sizeDelta.x, sizeDelta.y - speed * cumulativeTime);
+                await UniTask.Yield(_cancellationToken.Token);
+            }
+
+            _currentAddedHeight = 0f;
         }
     }
 }
