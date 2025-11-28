@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 358ccfb2404f4a19b85878926f2ee58f, type: 3}
+  m_Name: VisualRegistry
+  m_EditorClassIdentifier: Assembly-CSharp::Foundation.VisualRegistry
+  _spritesSerialized:
+  - _spriteId: Sprite1
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite2
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite3
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite4
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite5
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite6
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite7
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite8
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite9
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite10
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite11
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite12
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite13
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite14
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite15
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite16
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite17
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite18
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite19
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite20
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite21
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite22
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite23
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite24
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite25
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite26
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite27
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite28
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite29
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite30
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite31
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite32
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite33
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite34
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite35
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite36
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite37
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite38
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite39
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite40
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite41
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite42
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite43
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite44
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite45
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite46
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite47
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite48
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite49
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
+  - _spriteId: Sprite50
+    _sprite: {fileID: -342022016, guid: 9111c2a4ab60cc2408cef77707f10fd7, type: 3}
